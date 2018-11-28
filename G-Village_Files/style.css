@@ -1,0 +1,409 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #e3ecec;
+}
+/* first contaainer display set in grid layout */
+.container-1{
+  margin: 0 auto;
+  display: grid;
+  /* background image with linear gradient for better text display  */
+  background: linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7)), url("../g-Village_Files/pic-5.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-template-rows: auto;
+  grid-template-columns: 33.3% 33.3% auto;
+  grid-template-areas:
+  "header header header"
+  ". maincontent maincontent "
+  ". . article-1"
+  "mystery pullquote pullquote"
+  "article-2 article-2 .";
+}
+
+/* fixed navigation section with logo name and nav section */
+.navbar{
+  grid-area: header;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  margin-top: 0;
+  background-color: #343435a8;
+  text-align: center;
+}
+/* logo name floated left */
+.navbar h2{
+  float: left;
+  text-align: center;
+  color: #e8da94;
+  font-size: 2em;
+  margin-top: -5px;
+  margin-left: 20px;
+  padding: 20px;
+}
+.navbar h2 a{
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* nav floated right */
+.nav {
+  float: right;
+  margin: 25px;
+}
+/* setting nav to horizontal */
+.nav li{
+  list-style-type: none;
+  display: inline-block;
+}
+/* nav links display style */
+.nav li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+  padding: 20px;
+  color: #d6cbcb;
+}
+/* nav links hover */
+.nav li a:hover{
+  background: #f3f9f9b5;
+  color: #2a0e15;
+}
+
+/* maincontent section grid asigning */
+.maincontent{
+  grid-area: maincontent;
+  margin-top: 80px;
+}
+/* maincontent heading's properties */
+.maincontent h1{
+  font-family: serif;
+  color: #e8da94;
+  text-align: center;
+}
+/* maincontent paragraph's properties */
+.maincontent p{
+  text-align: justify;
+  color: #c2bce2;
+  padding: 25px 25px 5px 25px;
+}
+
+/* article-1 grid asigning */
+.article-1{
+  grid-area: article-1;
+}
+/* article-1 paragraph's properties */
+.article-1 p{
+  text-align: justify;
+  color: #c2bce2;
+  padding: 25px;
+}
+
+/* mystery section grid asigning */
+.mystery{
+  grid-area: mystery;
+}
+/* mystery img properties  */
+/* img with round border */
+.mystery img{
+  float: right;
+  height: 180px;
+  width: 180px;
+  border-radius: 180px;
+  margin-right: 30px;
+}
+
+/* pullquote section grid asigning */
+.pullquote{
+  grid-area: pullquote;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-right: 40px;
+  margin-left:35px;
+  border-top: 1px solid #807878;
+  border-bottom: 1px solid #807878;
+}
+/* pullquote blockquote's properties */
+blockquote{
+  text-align: center;
+  padding-top: 10px;
+  color: #e8da94;
+}
+
+/* article-2 grid asigning */
+.article-2{
+  grid-area: article-2;
+  padding: 20px;
+  column-gap: 50px;
+  column-count: 2;
+}
+/* article-2 paragraph's properties */
+.article-2 p{
+  color: #c2bce2;
+  text-align: justify;
+}
+
+
+/* The second container with grid display */
+.container-2{
+  margin-top: 65px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 33.3% 33.3% auto;
+  grid-template-areas:
+  "img-1 img-2 article-3";
+}
+
+/* img-1 grid asigning */
+.img-1{
+  grid-area: img-1;
+  margin: 0 20px 0 40px;
+  padding: 10px;
+  border: 2px solid #bbb1b1;
+}
+/* img-1 img properties */
+.img-1 img{
+  width: 80%;
+  height: 300px;
+  margin: 25px 0 0 35px;
+  /* animation property  */
+  animation: imga 8s ease-in-out 0s infinite;
+}
+
+/* animation style for img-1 img and img-2 img */
+@keyframes imga{
+  to{
+    transform: scale(0.85,0.85);
+  }
+}
+
+/* img-2 grid asigning */
+.img-2{
+  grid-area: img-2;
+  margin: 0 20px 0 20px;
+  padding: 10px;
+  border: 2px solid #bbb1b1;
+}
+/* img-2 img properties */
+.img-2 img{
+  width: 75%;
+  height: 300px;
+  margin: 25px 0 0 45px;
+  /* animation property sharing keyframe with img-1 img*/
+  animation: imga 8s ease-in-out 0s infinite;
+}
+/* img-1 and img-2 img figcaption properties */
+figcaption{
+  font-size: 1.1em;
+  margin-left: 60px;
+}
+/* img-1 and img-2 img figcaption link properties */
+figcaption a{
+  text-decoration: none;
+  text-align: center;
+  color: #0a0a9a;
+}
+/* img-1 and img-2 img figcaption link hover properties */
+figcaption a:hover{
+  color: #a54d0e;
+  background: #f3f9f9b5;
+  padding: 5px;
+}
+
+/* article-3 grid asigning */
+.article-3{
+  grid-area: article-3;
+  padding:0 25px 0 25px;
+}
+/* article-3 heading properties */
+.article-3 h3{
+  color: #a54d0e;
+  font-size: 1.4em;
+}
+/* article-3 paragraph's style */
+.article-3 p{
+  text-align: justify;
+  font-size: 1.1em;
+  color: black;
+}
+/* read more link style */
+.article-3 a{
+  font-weight: 700;
+  text-decoration: none;
+  color: #1413a7;
+}
+/* read more link hover style */
+.article-3 a:hover{
+  font-size: 1.1em;
+  color: #a90b0b;
+}
+
+/* footer properties */
+footer{
+  text-align: center;
+  background-color: #262629;
+  color: #e8da94;
+  height: 2.5rem;
+  padding: 1rem;
+  margin-top: 50px;
+}
+
+/* media queries for medium screen */
+@media screen and (max-width: 1200px){
+
+  /* setting container-1 columns to two equal 50% 50% */
+  .container-1{
+    margin: 0 auto;
+    width: 100%;
+    background-size: cover;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "header header"
+    "maincontent maincontent"
+    "article-1 ."
+    "mystery pullquote"
+    "article-2 article-2";
+  }
+  /* navigation properties */
+  .navbar{
+    z-index: 9999;
+    height: auto;
+  }
+  /* changing margin left and bottom for logo */
+  .navbar h2{
+    margin-left: 50px;
+    margin-bottom: 0;
+  }
+  /* nav properties for smaller devices */
+  .nav{
+    float: left;
+    text-align: left;
+    width: 100%;
+    margin-top: 0%;
+  }
+  /*
+  .nav li{
+    display: block;
+  }*/
+  .nav li a{
+    text-align: left;
+    padding: 5px;
+  }
+  /* increasing maincontent margin to fit fixed header with block li */
+  .maincontent{
+    margin-top: 120px;
+  }
+  /* removing  mystery img round radius*/
+  .mystery img{
+    height: 60%;
+    width: 60%;
+    border-radius: 0;
+    float: left;
+    margin-left: 20%;
+    margin-top: 10px;
+  }
+
+  /* increasing pullquote border top and bottom length */
+  .pullquote{
+    text-align: center;
+    border-top: 3px solid #807878;
+    border-bottom: 3px solid #807878;
+  }
+
+  /* setting article-2 columns from 2 to 1 */
+  .article-2{
+    column-count: 1;
+  }
+
+    /* setting container-2 columns to two equal 50% 50% */
+  .container-2{
+    /* margin: 0 auto; */
+    margin-top: 40px;
+    width: 100%;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "img-1 img-2"
+    "article-3 article-3";
+  }
+}
+
+/* media queries for small screens */
+@media screen and (max-width: 768px){
+
+  /* setting containers-1 and 2 to one column */
+  .container-1{
+    margin: 0 auto;
+    width: 100%;
+    background-size: contain;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "maincontent"
+    "article-1"
+    "pullquote"
+    "mystery"
+    "article-2";
+  }
+  /* navigation properties */
+  .navbar{
+    z-index: 9999;
+    height: auto;
+  }
+  /* changing margin left and bottom for logo */
+  .navbar h2{
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+  /* nav properties for smaller devices */
+  .nav{
+    float: left;
+    text-align: left;
+    width: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+  /*
+  .nav li{
+    display: block;
+  }*/
+  .nav li a{
+    text-align: left;
+    padding: 5px;
+    font-size: 0.5em;
+  }
+  /* increasing maincontent margin to fit fixed header with block li */
+  .maincontent{
+    margin-top: 120px;
+  }
+  .mystery img{
+    height: 60%;
+    width: 60%;
+    float: left;
+    margin-left: 20%;
+    margin-top: 10px;
+    /* border: 1px solid #8e9085; */
+    /* box-shadow: 10px solid #807878; */
+  }
+
+  .container-2{
+    margin: 0 auto;
+    width: 100%;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "img-1"
+    "img-2"
+    "article-3";
+  }
+  .img-1{
+    margin: 20px;
+  }
+  .img-2{
+    margin: 20px;
+  }
+}
